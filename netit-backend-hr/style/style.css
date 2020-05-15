@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f3f3f3;
+    box-sizing: border-box;
+}
+h1 {
+    margin: 40px;
+    text-align: center;
+}
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h5 {
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+h6 {
+    display: inline-block;
+    margin: 0 15px;
+}
+.header {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(76, 173, 202);
+}
+.header-2 {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(76, 173, 202);
+    text-align: end;
+}
+li {
+    display: inline-block;
+}
+header ul li a {
+    margin-right: 20px;
+    color: #000000;
+    margin-top: 3px;
+}
+a:hover {
+    text-decoration: none;
+}
+button {
+    margin-top: 15px;
+    display: inline-block;
+    margin-right: 20px;
+    width: 250px;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    width: 70%;
+    border-radius: 4px;
+}
+.container-index {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: space-evenly;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.registration {
+    margin-right: 10px;
+    background-color: #dedede;
+    padding: 15px;
+    height: 55vh;
+    align-items: center;
+    border-radius: 4px;
+}
+.korp {
+    background-color: #dedede;
+    padding: 15px;
+    height: 72vh;
+    border-radius: 4px;
+}
+.ind {
+    background-color: #dedede;
+    padding: 15px;
+    border-radius: 4px;
+}
+input {
+    margin-top: 15px;
+}
+.custom-select {
+    width: 310px;
+}
+.textarea {
+    margin-top: 20px;
+}
+.btn {
+    margin-left: 75px;
+}
+.btn-sec {
+    margin-left: 2px;
+}
+.btn-aj {
+    margin-left: 15px;
+}
+hr {
+    margin-bottom: 50px;
+}
+.login {
+    background-color: #dedede;
+    display: grid;
+    grid-template-columns: auto;
+    width: 40%;
+    border-radius: 4px;
+}
+.h1-login {
+    margin-top: 100px;
+}
+.error {
+    background-color: #fab0a0;
+    color: #762e24;
+    padding: 5px;
+}
+.success {
+    background-color: #44ff7c;
+    color: #010101;
+    padding: 5px;
+}
+.newJobPost {
+    color: #010101;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.newJobPost:hover {
+    color: #42ed77;
+    text-decoration: none;
+    opacity: 0.6;
+}
+.displayName{
+    color: #010101;
+}
+.logout {
+    color: #39fff0;
+    margin-left: 15px;
+}
+/*----------------------dashboard-------------*/
+.container-jp {
+    margin-top: 100px;
+}
+.jp  {
+    width: 100%;
+    height: 50px;
+    background-color: #eeeeee;
+    border: 1px solid #c4c4c4;
+    margin: 5px 0;
+    text-align: left;
+    padding-top: 10px;
+}
+.btn-success {
+
+    margin-top: -5px;
+    width: 133px;
+    margin-left: 35px;
+}
