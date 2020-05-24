@@ -11,6 +11,7 @@ class JobsPostController {
     public function index() {
 
         $this->jobPostCollection = \manage_job_post\ManageJobPost::fetch();
+
     }
 
     public function getJobPostCollection() {

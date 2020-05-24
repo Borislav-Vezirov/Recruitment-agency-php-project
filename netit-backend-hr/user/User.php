@@ -4,10 +4,14 @@ namespace user;
 
 class User {
 
+    public static function id() {
+        return $_SESSION['user_reference']['id'];
+    }
 
     public static function username() {
         return $_SESSION['user_reference']['username'];
     }
+
     public static function companyName() {
         return $_SESSION['user_reference']['company_name'];
     }

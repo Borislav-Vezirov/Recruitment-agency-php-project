@@ -5,6 +5,7 @@ namespace manage_job_post;
 
 
 class ManageJobPost {
+    public $second = null;
 
     public static function create($title, $category, $description, $requirements, $company) {
 
@@ -20,7 +21,8 @@ class ManageJobPost {
             \db\Database::getInstance()->query("SELECT * FROM final_project.jobs_post");
             return \db\Database::getInstance()->fetchCollection();
         }
-        \db\Database::getInstance()->query("SELECT * FROM final_project.jobs_post WHERE id = '{$id}'");
-        return \db\Database::getInstance()->fetchCollection();
+            \db\Database::getInstance()->query("SELECT * FROM final_project.jobs_post WHERE id = '{$id}'");
+            return \db\Database::getInstance()->fetchCollection();
     }
+
 }
