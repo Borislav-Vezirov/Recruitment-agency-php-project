@@ -39,9 +39,16 @@ include 'autoload.php';
 
 
     ?>
-</main>
+        <div class="container">
+            <div class="row">
+                <div class='col-sm-12 applay'> <button class='btn btn-success'>Кандидатствай</button>
+                </div>
+            </div>
+        </div>
 
-<script src="scripts/jquery"></script>
-</body>
+</main>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/query.js"></script>
+<script src="scripts/index.js"></script></body>
 
 </html>

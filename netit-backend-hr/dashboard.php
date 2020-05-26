@@ -1,8 +1,5 @@
 <?php
 include 'autoload.php';
-$jobsPostReference = new \controllers\JobsPostController();
-$jobsPostReference->index();
-$jobsPostReference->checkIfIsLogged();
 ?>
 
 <!DOCTYPE html>
@@ -38,25 +35,12 @@ $jobsPostReference->checkIfIsLogged();
 </header>
 <main>
     <h1>Обяви за работа</h1>
-    <div class="container container-jp">
-
-    <?php
-        foreach ($jobsPostReference->getJobPostCollection() as $value) {
-
-            echo "<div class='row'>";
-            echo "<div class='col-sm-4 jp'> <b>{$value['title']}</b></div>";
-            echo "<div class='col-sm-2 jp'> <i>{$value['category']}</i></div>";
-            echo "<div class='col-sm-3 jp'> {$value['company']}</div>";
-            echo "<div class='col-sm-3 jp'> <button class='btn btn-success' onclick='window.location.href =`job_post_extended.php`;'>Виж Повече
-                                            </button></div>";
-            echo "</div>";
-        }
-    ?>
-
+    <div id="container" class="container container-jp">
+        <!--content elements-->
     </div>
 </main>
-
-<script src="scripts/jquery"></script>
-</body>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/query.js"></script>
+<script src="scripts/index.js"></script></body>
 
 </html>

@@ -101,7 +101,8 @@ include 'autoload.php';
             </div>
         </form>
     </div>
-    <script src="scripts/jquery"></script>
-</body>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/query.js"></script>
+    <script src="scripts/index.js"></script></body>
 
 </html>

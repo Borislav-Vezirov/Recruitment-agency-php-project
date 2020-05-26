@@ -36,7 +36,10 @@
             <button class="btn btn-primary" onclick="window.location.href = 'registration_korp.php';">Регистрирай се</button>
         </div>
     </div>
-    <script src="scripts/jquery"></script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/query.js"></script>
+    <script src="scripts/index.js"></script>
+
 </body>
 
 </html>

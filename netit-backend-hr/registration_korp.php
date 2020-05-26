@@ -29,10 +29,10 @@ include 'autoload.php';
             <input type="hidden" name="post_tokken" value="1">
             <input type="submit" class="btn btn-primary btn-sec" name="post_submit">
         </form>
-
     </div>
-    <script src="scripts/jquery"></script>
-</body>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/query.js"></script>
+    <script src="scripts/index.js"></script></body>
 
 </html>
 

@@ -5,7 +5,6 @@ namespace manage_job_post;
 
 
 class ManageJobPost {
-    public $second = null;
 
     public static function create($title, $category, $description, $requirements, $company) {
 
@@ -13,7 +12,7 @@ class ManageJobPost {
                                           .  "VALUES('{$title}', '{$category}', '{$description}', '{$requirements}', '{$company}')");
 
         return \db\Database::getInstance()->lastInsertedId();
-    }
+}
 
     public static function fetch($id = null) {
 
