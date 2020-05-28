@@ -15,30 +15,40 @@ include 'autoload.php';
     <link rel="stylesheet" href="style/style.css">
 <body>
     <header>
-        <div class="header-2">
-            <ul>
-                <?php
-                    if(\user\User::displayName()) {
-                        echo '<li>';
-                        echo '<span class="displayName">';
-                        echo 'Здравейте '  . \user\User::displayName();
-                        echo '</span>';
-                        echo '</li>';
-                    }
-                ?>
-                <li><a class="btn-aj" href="dashboard.php">Обяви</a></li>
-                <li><a class="logout" href="logout.php">Излез</a></li>
-            </ul>
-        </div>
+        <div style="height: 2px; background: #27aae1;"></div>
+        <nav class="navbar navbar-expand-lg bg-secondary" style="margin: 0;">
+            <div class="container" style="margin: 0;">
+                <div class="row">
+                    <ul class="navbar-nav first">
+                        <li class="nav-item">
+                            <?php
+                                if(\user\User::displayName()) {
+                                    echo '<li>';
+                                    echo '<span class="displayName">';
+                                    echo 'Здравейте '  . \user\User::displayName();
+                                    echo '</span>';
+                                    echo '</li>';
+                                }
+                             ?>
+                        </li>
+                         <li class="nav-item"><a class="btn-aj" href="dashboard.php">Обяви</a></li>
+                    <ul class="navbar-nav second">
+                        <li class="nav-item"><a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> Излез</a></li>
+                    </ul>
+                 </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="height: 2px; background: #27aae1;"></div>
     </header>
-    <?php
-    if(\session\Session::checkFlashMessage('create_job_post')) {
+        <?php
+        if(\session\Session::checkFlashMessage('create_job_post')) {
 
-        echo '<div class="success">';
-        echo \session\Session::getFlashMessage('create_job_post');
-        echo '</div>';
-    }
-    ?>
+            echo '<div class="success">';
+            echo \session\Session::getFlashMessage('create_job_post');
+            echo '</div>';
+        }
+        ?>
     <h1 class="index">Публикуване на обява</h1>
     <div class="container">
         <form class="form-group" method="post">
@@ -101,8 +111,8 @@ include 'autoload.php';
             </div>
         </form>
     </div>
+    <script src="https://kit.fontawesome.com/94e12cd6b3.js" crossorigin="anonymous">
     <script src="scripts/jquery.js"></script>
-    <script src="scripts/query.js"></script>
+    <script src="scripts/ajax_query.js"></script>
     <script src="scripts/index.js"></script></body>
-
 </html>

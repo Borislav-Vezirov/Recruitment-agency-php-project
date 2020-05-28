@@ -37,7 +37,7 @@
         </div>
     </div>
     <script src="scripts/jquery.js"></script>
-    <script src="scripts/query.js"></script>
+    <script src="scripts/ajax_query.js"></script>
     <script src="scripts/index.js"></script>
 
 </body>
