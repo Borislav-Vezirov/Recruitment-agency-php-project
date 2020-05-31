@@ -75,5 +75,9 @@ class Database {
         return $this->dbConnection->insert_id;
     }
 
+    public function affectedRows() {
+        return $this->dbConnection->affected_rows;
+    }
+
 
 }

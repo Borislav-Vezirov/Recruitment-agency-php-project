@@ -14,8 +14,9 @@ include 'autoload.php';
     <link rel="stylesheet" href="style/style.css">
 <body>
 <header>
-    <div class="header-2">
-        <ul>
+    <div style="height: 2px; background: #27aae1;"></div>
+    <ul class="nav justify-content-start bg-secondary">
+        <li class="nav-item leftNavItems">
             <?php
 
             if(\user\User::displayName()) {
@@ -25,24 +26,23 @@ include 'autoload.php';
                 echo '</span>';
                 echo '</li>';
             }
-
-            if(\user\User::isLoged() && \user\User::isCompany()) {
-                echo '<li ><a class="newJobPost" href="admin_jobs.php">Публикувайте нова обява</a></li>';
-            }
             ?>
-            <li><a class="logout" href="logout.php">Излез</a></li>
-        </ul>
-    </div>
+        </li>
+        <li class="nav-item"><a class="btn-aj" href="dashboard.php">Обяви</a></li>
+        <?php
+
+        if(\user\User::isLoged() && \user\User::isCompany()) {
+            echo '<li class="nav-item"><a class="newJobPost" href="admin_jobs.php">Публикувайте нова обява</a></li>';
+        }
+        ?>
+        <li class="nav-item ml-auto rightNavItem"><a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> Излез</a></li>
+    </ul>
+    <div style="height: 2px; background: #27aae1;"></div>
 </header>
 <main>
-    <?php
-
-
-    ?>
         <div class="container">
             <div class="row">
-                <div class='col-sm-12 applay'> <button class='btn btn-success'>Кандидатствай</button>
-                </div>
+                <div class='col-sm-12 applay'> <button class='btn btn-success'>Кандидатствай</button></div>
             </div>
         </div>
 

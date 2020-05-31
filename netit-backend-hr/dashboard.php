@@ -14,11 +14,8 @@ include 'autoload.php';
 <body>
 <header>
     <div style="height: 2px; background: #27aae1;"></div>
-    <nav class="navbar navbar-expand-lg bg-secondary" style="margin: 0;">
-    <div class="container" style="margin: 0;">
-        <div class="row">
-            <ul class="navbar-nav">
-                <li class="nav-item">
+            <ul class="nav justify-content-start bg-secondary">
+                <li class="nav-item leftNavItems">
                     <?php
 
                           if(\user\User::displayName()) {
@@ -36,13 +33,8 @@ include 'autoload.php';
                             echo '<li class="nav-item"><a class="newJobPost" href="admin_jobs.php">Публикувайте нова обява</a></li>';
                         }
                     ?>
+                <li class="nav-item ml-auto rightNavItem"><a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> Излез</a></li>
             </ul>
-            <ul class="navbar-nav second">
-                <li class="nav-item"><a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> Излез</a></li>
-            </ul>
-        </div>
-    </div>
-    </nav>
     <div style="height: 2px; background: #27aae1;"></div>
 </header>
 <main>
@@ -50,6 +42,7 @@ include 'autoload.php';
     <div id="container" class="container container-jp">
         <!--content elements-->
     </div>
+    <div id="fullView"></div>
 </main>
 <script src="https://kit.fontawesome.com/94e12cd6b3.js" crossorigin="anonymous"></script>
 <script src="scripts/jquery.js"></script>

@@ -16,29 +16,21 @@ include 'autoload.php';
 <body>
     <header>
         <div style="height: 2px; background: #27aae1;"></div>
-        <nav class="navbar navbar-expand-lg bg-secondary" style="margin: 0;">
-            <div class="container" style="margin: 0;">
-                <div class="row">
-                    <ul class="navbar-nav first">
-                        <li class="nav-item">
-                            <?php
-                                if(\user\User::displayName()) {
-                                    echo '<li>';
-                                    echo '<span class="displayName">';
-                                    echo 'Здравейте '  . \user\User::displayName();
-                                    echo '</span>';
-                                    echo '</li>';
-                                }
-                             ?>
-                        </li>
-                         <li class="nav-item"><a class="btn-aj" href="dashboard.php">Обяви</a></li>
-                    <ul class="navbar-nav second">
-                        <li class="nav-item"><a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> Излез</a></li>
-                    </ul>
-                 </ul>
-                </div>
-            </div>
-        </nav>
+            <ul class="nav justify-content-start bg-secondary">
+                <li class="nav-item leftNavItems">
+                                <?php
+                                    if(\user\User::displayName()) {
+                                        echo '<li>';
+                                        echo '<span class="displayName">';
+                                        echo 'Здравейте '  . \user\User::displayName();
+                                        echo '</span>';
+                                        echo '</li>';
+                                    }
+                                 ?>
+                </li>
+                 <li class="nav-item"><a class="btn-aj" href="dashboard.php">Обяви</a></li>
+                 <li class="nav-item ml-auto rightNavItem"><a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> Излез</a></li>
+            </ul>
         <div style="height: 2px; background: #27aae1;"></div>
     </header>
         <?php
