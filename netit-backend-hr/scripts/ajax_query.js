@@ -1,10 +1,22 @@
 (function() {
 
+    var baseUrlTransform = function(url) {
+
+        var urlElementCollection = url.split("/");
+        var endpoint    = urlElementCollection[0];
+        var method      = urlElementCollection[1] || 'index';
+
+        return `http://localhost/netit-backend-hr/routes.php?endpoint=${endpoint}&method=${method}`;
+    }
+
     var ajaxHelper = function(url, requestObject, isJSONRequest, callbackSuccess, callbackError ) {
 
         var xmlHttpRequest  = new XMLHttpRequest();
         var requestMethod   =  (requestObject) ? "POST" : "GET";
         var isJSONRequest   = isJSONRequest || false;
+
+        var url             = baseUrlTransform(url);
+        // var requestObject   = requestTransform(requestObject);
 
         xmlHttpRequest.open(requestMethod, url);
         xmlHttpRequest.setRequestHeader('Content-Type', 'application/json');

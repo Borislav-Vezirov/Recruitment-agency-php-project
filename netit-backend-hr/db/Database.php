@@ -79,5 +79,4 @@ class Database {
         return $this->dbConnection->affected_rows;
     }
 
-
 }

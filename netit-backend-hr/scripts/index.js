@@ -3,7 +3,13 @@ var jobCollection      = [];
 var objectCollection   = { jobCollection : [] };
 var fullView           = document.getElementById('fullView');
 
-Ajax.getJSON("http://localhost/netit-backend-hr/routes.php?request=posts", function(data) {
+var extended = function(elementId) {
+    Ajax.getJSON(`posts/index/${elementId}`, function (element) {
+        fullView.innerHTML = element[0].content;
+    });
+}
+
+Ajax.getJSON('posts/index', function(data) {
 
     for(var i = 0; i < data.length; i++) {
 
@@ -26,8 +32,3 @@ Ajax.getJSON("http://localhost/netit-backend-hr/routes.php?request=posts", funct
     console.log(error);
 });
 
- var extended = function(elementId) {
-    Ajax.getJSON("http://localhost/netit-backend-hr/routes.php?request=index&${elementId}", function(element) {
-        fullView.innerHTML = element[0].content;
-    });
-}
